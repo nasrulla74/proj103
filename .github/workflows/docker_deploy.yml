@@ -42,4 +42,5 @@ jobs:
           docker pull ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:latest
           docker stop $IMAGE_NAME || true
           docker rm $IMAGE_NAME || true
-          docker run -d --name $IMAGE_NAME -p 80:8000 ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:latest
+          docker run -d --name $IMAGE_NAME -p 8080:8000 ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:latest
+    
